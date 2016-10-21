@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Account Management</h1>
+	<table border="2">
+		<tr>
+			<th>Account Id</th>
+			<th>Name</th>
+			<th>Account Type</th>
+		</tr>
+
+		<tr th:each="account : ${accounts}">
+			<td th:text="${account.accountId}"/>
+			<td th:text="${account.name}"/>
+			<td th:text="${account.accType}"/>
+		</tr>
+	</table>
+	<a href="/account">Back</a>
+</body>
+</html>
